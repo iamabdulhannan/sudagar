@@ -2,11 +2,10 @@ import { useState } from 'react'
 import { Link, Navigate, useNavigate, useSearchParams } from 'react-router-dom'
 import { Button, Field, Input } from '../../components/ui'
 import { authErrorKey, useAuth } from '../../lib/auth'
+import { safeNext } from '../../lib/paths'
 import { useI18n } from '../../lib/i18n'
 import { AuthShell, FormError, PasswordField } from './AuthShell'
 
-/** only same-site paths are allowed as the page to return to */
-export const safeNext = (v: string | null) => (v && v.startsWith('/') && !v.startsWith('//') ? v : '')
 
 export default function SignIn() {
   const { t } = useI18n()

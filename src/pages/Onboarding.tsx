@@ -10,7 +10,7 @@ import { createFirm, deleteFirm, firmDb, meta, seedFirm } from '../lib/db'
 import { useI18n } from '../lib/i18n'
 import { cloudConfigured } from '../lib/supabase'
 import type { Firm, Role } from '../lib/types'
-import { safeNext } from './auth/SignIn'
+import { safeNext } from '../lib/paths'
 
 /**
  * After sign-in: pick one of the account's businesses, create a new one, join one with an

@@ -12,3 +12,6 @@ export const partyPath = (id: string) => `/parties/${id}`
 export const itemPath = (id: string) => `/items/${id}`
 export const accountPath = (id: string) => `/cash-bank/${id}`
 export const reportPath = (key: string) => `/reports/${key}`
+
+/** only same-site paths are allowed as the page to return to after sign-in */
+export const safeNext = (v: string | null) => (v && v.startsWith('/') && !v.startsWith('//') ? v : '')
