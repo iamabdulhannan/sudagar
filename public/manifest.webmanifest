@@ -1,0 +1,10 @@
+{
+  "name": "Saudagar",
+  "short_name": "Saudagar",
+  "description": "Billing, POS, inventory and accounting for every business. Works offline.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0c0a09",
+  "theme_color": "#0f766e",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
