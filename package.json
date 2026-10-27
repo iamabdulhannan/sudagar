@@ -8,8 +8,9 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "test": "tsx --test tests/*.test.ts && npm run test:db", "test:db": "tsx tests/db/schema.test.ts"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
+    "test": "tsx --test tests/*.test.ts && npm run test:db",
+    "test:db": "tsx tests/db/schema.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.10",
     "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
